@@ -66,6 +66,7 @@ public class MobileFoodServiceImpl implements MobileFoodService {
                 .collect(Collectors.toList());
     }
 
+    @Cacheable("mobile_food_facility")
     @Override
     public MobileFoodFacilityDTO getById(Long locationId) {
         return mapper.map(repository.findById(locationId)
