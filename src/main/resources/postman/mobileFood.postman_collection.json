@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "3bf5f79b-97de-458d-bf65-a76f88053af4",
+		"name": "mobileFood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all mobile food",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by locationDescription",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all/location-description-address/1455 MARKET",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all",
+						"location-description-address",
+						"1455 MARKET"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by address",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all/address/10th",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all",
+						"address",
+						"10th"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by facilityType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all/facility-type/truck",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all",
+						"facility-type",
+						"truck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by applicant and facilityType",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all/applicant/park/facility-type/truck",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all",
+						"applicant",
+						"park",
+						"facility-type",
+						"truck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get mobile food by locationId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-by/1575199",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-by",
+						"1575199"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all the close mobile food by latitude and longitude",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all?latitude=37.71&longitude=-122.397",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "37.71"
+						},
+						{
+							"key": "longitude",
+							"value": "-122.397"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by foodItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/find-all/food-items/chicken",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"find-all",
+						"food-items",
+						"chicken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
