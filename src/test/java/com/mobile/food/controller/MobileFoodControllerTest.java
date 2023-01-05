@@ -8,7 +8,6 @@ import com.mobile.food.service.impl.MobileFoodServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.internal.matchers.apachecommons.ReflectionEquals;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -40,8 +39,6 @@ class MobileFoodControllerTest {
 
     @MockBean
     MobileFoodServiceImpl service;
-
-    private final ModelMapper mapper = new ModelMapper();
 
     private static final ObjectMapper om = new ObjectMapper();
 

@@ -1,6 +1,5 @@
 package com.mobile.food;
 
-import com.mobile.food.entity.MobileFoodFacility;
 import com.mobile.food.entity.dto.MobileFoodFacilityDTO;
 
 import java.util.Collections;
