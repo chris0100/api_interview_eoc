@@ -39,8 +39,8 @@ public class Config {
                 "Mobile Food API",
                 "Mobile Food Facility - API that returns a set of food trucks",
                 "1.0",
-                "http://xxxxx.com/terms",
-                new Contact("xxxxx", "https://xxxxx.com", "apis@xxxxx.com"),
+                "http://mobileFood.com/terms",
+                new Contact("mobileFood", "https://mobileFood.com", "apis@mobilefood.com"),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()
