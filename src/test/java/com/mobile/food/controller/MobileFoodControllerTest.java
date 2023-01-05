@@ -146,7 +146,7 @@ class MobileFoodControllerTest {
     void testGetAllCloseMobilefoodByLatitudeAndLongitude() throws Exception {
         given(service.getCloseMobileFood(anyDouble(), anyDouble())).willReturn(allMobileFoodFacility());
 
-        List<MobileFoodFacilityDTO> actualRecords = om.readValue(mockMvc.perform(get("/api/find-all?latitude=37.71&longitude=-122.397"))
+        List<MobileFoodFacilityDTO> actualRecords = om.readValue(mockMvc.perform(get("/api/find-all/location?latitude=37.71&longitude=-122.397"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.*", hasSize(allMobileFoodFacility().size())))
                 .andReturn().getResponse().getContentAsString(), new TypeReference<>() {

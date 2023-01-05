@@ -115,7 +115,7 @@ public class IntegrationTest {
     @Test
     void getAllMobileFoodByLatitudeAndLongitude(){
         ResponseEntity<List<MobileFoodFacilityDTO>> response = restTemplate.exchange(
-                "/api/find-all?latitude=37.71&longitude=-122.397", HttpMethod.GET, null, new ParameterizedTypeReference<>() {
+                "/api/find-all/location?latitude=37.71&longitude=-122.397", HttpMethod.GET, null, new ParameterizedTypeReference<>() {
                 }
         );
         List<MobileFoodFacilityDTO> mobileFoodFacilityDTOList = response.getBody();

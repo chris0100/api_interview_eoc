@@ -88,7 +88,7 @@ public class MobileFoodController {
 
     @ApiOperation(value = "Get the close mobile foods by latitude and longitude")
     @ApiResponse(code = 200, message = "OK, the data return correctly")
-    @GetMapping(path = "/find-all", produces = MediaType.APPLICATION_JSON_VALUE, params = {"latitude", "longitude"})
+    @GetMapping(path = "/find-all/location", produces = MediaType.APPLICATION_JSON_VALUE, params = {"latitude", "longitude"})
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<List<MobileFoodFacilityDTO>> getAllCloseMobilefoodByLatitudeAndLongitude(@RequestParam Double latitude, @RequestParam Double longitude){
         return new ResponseEntity<>(service.getCloseMobileFood(latitude, longitude), HttpStatus.OK);

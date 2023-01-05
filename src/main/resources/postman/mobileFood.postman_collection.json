@@ -136,7 +136,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/find-all?latitude=37.71&longitude=-122.397",
+					"raw": "localhost:8080/api/find-all/location?latitude=37.71&longitude=-122.397",
 					"host": [
 						"localhost"
 					],
