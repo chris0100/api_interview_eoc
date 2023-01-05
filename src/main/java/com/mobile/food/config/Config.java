@@ -39,8 +39,8 @@ public class Config {
                 "Mobile Food API",
                 "Mobile Food Facility - API that returns a set of food trucks",
                 "1.0",
-                "http://codmind.com/terms",
-                new Contact("Codmind", "https://codmind.com", "apis@codmind.com"),
+                "http://xxxxx.com/terms",
+                new Contact("xxxxx", "https://xxxxx.com", "apis@xxxxx.com"),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()
