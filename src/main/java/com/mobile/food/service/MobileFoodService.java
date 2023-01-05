@@ -19,4 +19,6 @@ public interface MobileFoodService {
     MobileFoodFacilityDTO getById(Long locationId);
 
     List<MobileFoodFacilityDTO> getCloseMobileFood(Double latitude, Double longitude);
+
+    List<MobileFoodFacilityDTO> getAllByFoodItems(String foodItems);
 }

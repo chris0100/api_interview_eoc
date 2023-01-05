@@ -13,6 +13,8 @@ public interface MobileFoodRepository extends JpaRepository<MobileFoodFacility, 
 
     List<MobileFoodFacility> findAllByAddressContainingIgnoreCase(String address);
 
+    List<MobileFoodFacility> findAllByFoodItemsContainingIgnoreCase(String foodItems);
+
     List<MobileFoodFacility> findAllByFacilityTypeContainingIgnoreCase(String address);
 
     List<MobileFoodFacility> findAllByApplicantContainingIgnoreCaseAndFacilityTypeContainingIgnoreCase(String applicant, String facilityType);

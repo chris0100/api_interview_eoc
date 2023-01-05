@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -51,6 +52,12 @@ public class MobileFoodController {
         return new ResponseEntity<>(service.getAllByAddress(address), HttpStatus.OK);
     }
 
+    @GetMapping(path = "/find-all/food-items/{foodItems}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<List<MobileFoodFacilityDTO>> getAllMobilefoodByFoodItems(@PathVariable String foodItems){
+        return new ResponseEntity<>(service.getAllByFoodItems(foodItems), HttpStatus.OK);
+    }
+
 
     @GetMapping(path = "/find-all/facility-type/{facilityType}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
@@ -65,9 +72,9 @@ public class MobileFoodController {
     }
 
 
-    @GetMapping(path = "/find-all/latitude/{latitude}/longitude/{longitude}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/find-all", produces = MediaType.APPLICATION_JSON_VALUE, params = {"latitude", "longitude"})
     @ResponseStatus(HttpStatus.OK)
-    public ResponseEntity<List<MobileFoodFacilityDTO>> getAllCloseMobilefoodByLatitudeAndLongitude(@PathVariable Double latitude, @PathVariable Double longitude){
+    public ResponseEntity<List<MobileFoodFacilityDTO>> getAllCloseMobilefoodByLatitudeAndLongitude(@RequestParam Double latitude, @RequestParam Double longitude){
         return new ResponseEntity<>(service.getCloseMobileFood(latitude, longitude), HttpStatus.OK);
     }
 }

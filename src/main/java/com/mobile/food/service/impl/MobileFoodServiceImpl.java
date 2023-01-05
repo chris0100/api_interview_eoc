@@ -83,6 +83,14 @@ public class MobileFoodServiceImpl implements MobileFoodService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<MobileFoodFacilityDTO> getAllByFoodItems(String foodItems) {
+        return repository.findAllByFoodItemsContainingIgnoreCase(foodItems)
+                .stream()
+                .map(obj -> mapper.map(obj, MobileFoodFacilityDTO.class))
+                .collect(Collectors.toList());
+    }
+
     private boolean calculateCloseLocation(Double latitude, Double longitude, MobileFoodFacility mobileFoodFacility) {
         return Math.abs(Math.abs(mobileFoodFacility.getLatitude()) - Math.abs(latitude)) <= 0.02
                 && Math.abs(Math.abs(mobileFoodFacility.getLongitude()) - Math.abs(longitude)) <= 0.02;
