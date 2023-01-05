@@ -1,6 +1,5 @@
 package com.mobile.food.service;
 
-import com.mobile.food.entity.MobileFoodFacility;
 import com.mobile.food.entity.dto.MobileFoodFacilityDTO;
 
 import java.util.List;
