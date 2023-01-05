@@ -3,6 +3,11 @@
 
 ## Database
 It uses a H2 in-memory database sqlite database (for easy local test without losing test data after every restart), can be changed easily in the application.yml for any other database.
+```
+http://localhost:8080/h2-console/
+userName: sa
+password:
+```
 
 ## OpenAPI & Swagger
 OpenAPI Specification (formerly Swagger Specification) is an API description format for REST APIs. An OpenAPI file allows you to describe your entire API
