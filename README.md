@@ -23,12 +23,13 @@ swagger-ui: http://localhost:8080/swagger-ui.html
 
 This project uses Maven for builds.
 You need Java 11 installed.
+You can use Intellij to open the project and run it.
 
 
 ## Building
 
 ```
-$ mvn clean install
+$ mvn clean install -DskipTests
 ```
 
 ## Running
