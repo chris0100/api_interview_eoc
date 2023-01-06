@@ -25,6 +25,21 @@ This project uses Maven for builds.
 You need Java 11 installed.
 You can use Intellij to open the project and run it.
 
+## Run using Docker
+
+on the path of the project run the next commands using the terminal:
+```
+mvn clean install -DskipTests
+
+docker build -t spring-boot-docker .
+
+docker run -p 8080:8080 spring-boot-docker
+```
+
+After that you can visit the swagger page to tests the endpoints:
+
+http://localhost:8080/swagger-ui.html
+
 
 ## Building
 
